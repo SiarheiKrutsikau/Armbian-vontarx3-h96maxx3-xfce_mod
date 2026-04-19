@@ -5,7 +5,7 @@ Original source can be found here: [VONTAR TV BOX SHOP](https://www.vontar.cn/pa
 ---
 ### 💾 Download Links:
 
-* 🖥️ **[PC Upgrade Pack (v1.0.0)](https://github.com/SiarheiKrutsikau/Armbian-vontarx3-h96maxx3-xfce_mod/releases/tag/v1.0.0-pc)**
+*  🖥️ **[PC Upgrade Pack (v1.0.0)](https://github.com/SiarheiKrutsikau/Armbian-vontarx3-h96maxx3-xfce_mod/releases/tag/v1.0.0_pc_upgrade)**
   *Used for restoration via PC and USB-to-USB cable (Amlogic USB Burning Tool).*
 
 * 🔌 **[USB Upgrade Pack (v1.1.0)](https://github.com/SiarheiKrutsikau/Armbian-vontarx3-h96maxx3-xfce_mod/releases/tag/v1.1.0-usb)**
