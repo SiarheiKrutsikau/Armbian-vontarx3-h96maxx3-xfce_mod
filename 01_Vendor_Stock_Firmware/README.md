@@ -28,7 +28,7 @@ Original source can be found here: [VONTAR TV BOX SHOP](https://www.vontar.cn/pa
 ---
 ### 💾 Ссылки на скачивание (Download Links):
 
-* 🖥️ **[PC Upgrade Pack (v1.0.0)](https://github.com/SiarheiKrutsikau/Armbian-vontarx3-h96maxx3-xfce_mod/releases/tag/v1.0.0-pc)**
+* 🖥️ **[PC Upgrade Pack (v1.0.0)]([https://github.com/SiarheiKrutsikau/Armbian-vontarx3-h96maxx3-xfce_mod/releases/tag/v1.0.0-pc](https://github.com/SiarheiKrutsikau/Armbian-vontarx3-h96maxx3-xfce_mod/releases/tag/v1.0.0_pc_upgrade))**
   *Для восстановления через компьютер и кабель USB-USB (Amlogic USB Burning Tool).*
 
 * 🔌 **[USB Upgrade Pack (v1.1.0)](https://github.com/SiarheiKrutsikau/Armbian-vontarx3-h96maxx3-xfce_mod/releases/tag/v1.1.0-usb)**
