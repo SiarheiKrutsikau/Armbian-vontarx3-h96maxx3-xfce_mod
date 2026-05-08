@@ -59,4 +59,23 @@ install-aml.sh
 
 Важный нюанс кода: Скрипт специально оберегает загрузчик. При разметке он восстанавливает код загрузчика из бэкапа, но аккуратно «обходит» таблицу разделов, чтобы устройство не превратилось в «кирпич» и сохранило способность стартовать.
 
+***
+pishrink-btrfs2500M.sh
+[ EN ] English Description
+🛡 PiShrink Btrfs Edition (2500MB Strict)
+
+This script is a specialized Btrfs alternative to the famous PiShrink (which is designed for ext4). It allows you to minimize the size of your ARM-board images for easier sharing and storage.
+    Logic: It strictly shrinks the root partition to exactly 2500MB.
+    Safety: If the data on your image exceeds 2500MB, the script will stop and issue an ERROR to prevent data loss.
+    Purpose: A "quick-fix" solution for standard builds where you need a predictable, fixed image size.
+    Fast & Clean: Includes automatic free space zeroing for better .gz compression.
+
+[ RU ] Русское описание
+🛡 PiShrink Btrfs Edition (Строго 2500МБ)
+
+Этот скрипт — специализированный аналог знаменитого PiShrink (который работает с ext4), но переписанный под файловую систему Btrfs. Он предназначен для минимизации размера образов ваших прошивок.
+    Логика: Скрипт принудительно сжимает корневой раздел ровно до 2500 МБ.
+    Безопасность: Если объем ваших данных в образе больше 2500 МБ, скрипт прервет работу и выдаст ошибку, чтобы не повредить файлы.
+    Назначение: "Быстрое решение" (quick-fix) для типовых сборок, когда нужен фиксированный и предсказуемый размер итогового файла.
+    Оптимизация: Автоматически забивает свободное место нулями для максимально эффективного сжатия в архив .gz.
 
