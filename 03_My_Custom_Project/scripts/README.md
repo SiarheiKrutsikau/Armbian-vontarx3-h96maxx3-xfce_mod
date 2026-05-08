@@ -69,6 +69,13 @@ This script is a specialized Btrfs alternative to the famous PiShrink (which is 
     Safety: If the data on your image exceeds 2500MB, the script will stop and issue an ERROR to prevent data loss.
     Purpose: A "quick-fix" solution for standard builds where you need a predictable, fixed image size.
     Fast & Clean: Includes automatic free space zeroing for better .gz compression.
+[ EN ] Usage Instructions
+Your workflow is now as follows:
+    Prepare the system: Set up and configure everything on your TV box as needed.
+    Create a backup: Create an .img file of your SD card/drive (e.g., using the dd command on your PC).
+    Run the script: Execute the script with root privileges:
+    sudo ./pishrink-btrfs2500M.sh my_image.img
+    Wait: After a few minutes, you will have a finished, ready-to-share, and ultra-compact image.
 
 [ RU ] Русское описание
 🛡 PiShrink Btrfs Edition (Строго 2500МБ)
@@ -78,4 +85,10 @@ This script is a specialized Btrfs alternative to the famous PiShrink (which is 
     Безопасность: Если объем ваших данных в образе больше 2500 МБ, скрипт прервет работу и выдаст ошибку, чтобы не повредить файлы.
     Назначение: "Быстрое решение" (quick-fix) для типовых сборок, когда нужен фиксированный и предсказуемый размер итогового файла.
     Оптимизация: Автоматически забивает свободное место нулями для максимально эффективного сжатия в архив .gz.
-
+[ RU ] Инструкция по использованию
+Ваш порядок действий теперь такой:
+    Подготовка: Настройте систему на приставке так, как вам нужно.
+    Создание бэкапа: Сделайте образ .img вашей карты памяти или диска (например, через команду dd на компьютере).
+    Запуск скрипта: Запустите скрипт от имени суперпользователя:
+    sudo ./pishrink-btrfs2500M.sh my_image.img
+    Результат: Подождите пару минут, и вы получите готовый, максимально компактный образ, удобный для хранения и передачи.
