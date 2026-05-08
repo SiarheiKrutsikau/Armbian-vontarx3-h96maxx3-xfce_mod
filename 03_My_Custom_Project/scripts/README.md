@@ -1,3 +1,111 @@
+🛠 Repository Scripts / Скрипты репозитория
+
+This folder contains essential tools for Armbian installation and image optimization.
+1. SlimBtrfs.sh  (Recommended)
+
+Advanced tool for optimizing and shrinking Linux disk images with deep Btrfs support.
+🇺🇸 English Brief
+
+SlimBtrfs.sh is a high-performance evolution of the image-shrinking concept.
+    Key Features: Automatic Btrfs balance/defrag, dynamic resizing (no fixed limits), zero-filling free space, non-destructive (works on a copy), Gzip/XZ compression, and live CPU monitoring.
+    Usage: sudo ./SlimBtrfs.sh your_image.img
+
+🇷🇺 Краткое описание
+
+SlimBtrfs.sh — продвинутая эволюция идеи сжатия образов.
+    Основные возможности: Оптимизация Btrfs (balance/defrag), динамическое изменение размера (без жестких лимитов), зануление свободного места, безопасная работа с копией образа, сжатие Gzip/XZ и мониторинг нагрузки CPU.
+    Запуск: sudo ./SlimBtrfs.sh "ваш_образ.img"
+
+2. install-aml.sh
+
+Automated installer for transferring Armbian from USB/SD to internal eMMC memory.
+🇺🇸 English Description
+
+This script prepares your TV box to operate independently without an external drive.
+    Preparation: Language selection (EN/RU), time synchronization, and mode choice (Keep Environment or Reset/New Owner).
+    Disk Management: Automatic eMMC detection, safe bootloader (U-Boot) backup, and smart partitioning (BOOT/ROOT).
+    System Transfer: High-speed file copying with a progress bar and automatic boot configuration (extlinux/uEnv/boot.ini).
+    Safety: Specifically protects the bootloader partition table to prevent "bricking" the device.
+
+🇷🇺 Русское описание
+
+Скрипт предназначен для переноса системы Armbian с флешки на внутреннюю память (eMMC).
+    Подготовка: Выбор языка, синхронизация времени и выбор режима (Сохранение настроек или Полный сброс).
+    Работа с диском: Поиск eMMC, бэкап загрузчика (U-Boot) и автоматическая разметка разделов.
+    Перенос: Поочередное копирование системных папок с анимацией прогресса и настройка путей загрузки.
+    Безопасность: Особый алгоритм защиты загрузчика, исключающий превращение приставки в «кирпич» при переразметке.
+
+3. pishrink-btrfs2500M.sh (Legacy)
+🇺🇸 English
+
+A specialized tool that strictly shrinks the root partition to exactly 2500MB. Use this only if you need a predictable fixed size. For all other cases, use SlimBtrfs.sh.
+🇷🇺 Русский
+Специализированный инструмент, который принудительно сжимает раздел до 2500 МБ. Используйте его, только если вам нужен фиксированный размер. В остальных случаях рекомендуется SlimBtrfs.sh.
+
+
+*****
+English: Detailed Script Overview
+Русский: Подробный обзор скриптов
+
+SlimBtrfs.sh 
+
+Advanced professional tool for optimizing and shrinking Linux disk images with Btrfs support.
+📖 Detailed Script Overview / Подробный обзор скрипта
+🇺🇸 English Description
+
+SlimBtrfs.sh is a high-performance evolution of the classic image-shrinking concept. Specifically designed for Armbian and other Linux distributions using the Btrfs filesystem, it doesn't just reduce the file size — it performs deep filesystem optimization to ensure the health and portability of your images.
+Key Features
+    Btrfs Optimization: Automatically runs balance and defragment before shrinking to reorganize data efficiently.
+    Zero-Fill Technology: Fills free space with zeros, allowing compression algorithms to achieve maximum ratios.
+    Safety First: The script never modifies your original source image. All operations are safely performed on a .shrunk.img copy.
+    Smart Compression:
+        Gzip (-9): Fast and widely compatible.
+        XZ (-T0): Ultra-compact storage using all available CPU cores.
+        All-in-One: Option to generate both .gz and .xz formats in a single run.
+    Live CPU Monitor: Real-time system load tracking during heavy compression tasks.
+    Multi-language Support: Full interactive menu in English and Russian.
+
+Requirements
+    OS: Linux (Ubuntu/Debian/Armbian recommended).
+    Packages: btrfs-progs, fdisk, util-linux, gzip, xz-utils.
+
+Installation & Usage
+Bash
+
+# 1. Download or create the script and make it executable
+chmod +x SlimBtrfs.sh
+
+# 2. Run with sudo and provide your image path
+sudo ./SlimBtrfs.sh your_image.img
+
+🇷🇺 Описание на русском
+
+SlimBtrfs.sh — это продвинутый профессиональный инструмент для оптимизации и уменьшения размера образов дисков. Скрипт разработан специально для Armbian и других дистрибутивов, использующих файловую систему Btrfs. Он не просто обрезает лишнее место, но и проводит глубокое обслуживание ФС для стабильной работы и компактного хранения.
+Основные возможности
+    Оптимизация Btrfs: Автоматический запуск balance и defragment перед уменьшением размера для эффективной переорганизации данных.
+    Зануление свободного места: Технология Zero-Fill очищает пустое пространство, что позволяет архиваторам достичь экстремальной степени сжатия.
+    Безопасность: Скрипт никогда не изменяет исходный файл. Все действия проводятся над рабочей копией .shrunk.img.
+    Умное сжатие:
+        Gzip (-9): Быстрый и максимально совместимый формат.
+        XZ (-T0): Ультра-компактный архив с использованием всех ядер процессора.
+        Всё вместе: Уникальный режим создания обоих архивов за один проход.
+    Мониторинг CPU: Отображение реальной нагрузки на процессор во время упаковки.
+    Двуязычный интерфейс: Интерактивное меню на русском и английском языках.
+
+Требования
+    ОС: Linux (рекомендуется Ubuntu/Debian/Armbian).
+    Пакеты: btrfs-progs, fdisk, util-linux, gzip, xz-utils.
+
+Установка и запуск
+Bash
+
+# 1. Сделайте скрипт исполняемым
+chmod +x SlimBtrfs.sh
+
+# 2. Запустите с правами суперпользователя
+sudo ./SlimBtrfs.sh "ваш_образ.img"
+
+*****
 install-aml.sh
     This script is designed to transfer (install) the Armbian operating system from an external USB flash drive to the internal memory (eMMC) of your TV box. It acts as an automated installer that fully prepares the device to operate independently without a flash drive.
 Step-by-Step Description of the Process:
@@ -59,7 +167,7 @@ install-aml.sh
 
 Важный нюанс кода: Скрипт специально оберегает загрузчик. При разметке он восстанавливает код загрузчика из бэкапа, но аккуратно «обходит» таблицу разделов, чтобы устройство не превратилось в «кирпич» и сохранило способность стартовать.
 
-***
+*****
 pishrink-btrfs2500M.sh
 [ EN ] English Description
 🛡 PiShrink Btrfs Edition (2500MB Strict)
