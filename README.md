@@ -41,3 +41,5 @@ All ready-to-use images are available in the **[Releases](https://github.com/Sia
 ⚠️ **Отказ от ответственности:** Вы используете данные файлы на свой страх и риск. Всегда делайте бэкап перед прошивкой!
 
 ![Visitor Count](https://komarev.com/ghpvc/?username=SiarheiKrutskau&repo=Armbian-vontarx3-h96maxx3-xfce_mod&color=blue&style=flat-square)
+
+[![Repo Stats](https://github-readme-stats.vercel.app/api/pin/?username=SiarheiKrutskau&repo=Armbian-vontarx3-h96maxx3-xfce_mod&theme=radical)](https://github.com/SiarheiKrutskau/Armbian-vontarx3-h96maxx3-xfce_mod)
